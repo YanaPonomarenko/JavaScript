@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandomButton</title>
+    <style>
+        .block {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .block:hover {
+            transform: scale(1.05);
+        }
+        
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        #addBlockBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="addBlockBtn">Add block</button>
+    <div id="container"></div>
+
+    <script src="lesson8.js"></script>
+</body>
+</html>
