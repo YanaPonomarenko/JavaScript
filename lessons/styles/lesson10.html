@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <style>
+        body { font-family: Arial; padding: 50px; text-align: center; }
+        input, button { padding: 8px; margin: 5px; }
+        .logout { background: pink; color: white; }
+        .hidden { display: none; }
+    </style>
+  </head>
+  <body>
+    
+    <h2 id="welcome"></h2>
+    
+    <div id="form">
+        <input type="text" id="login" placeholder="Login"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <button onclick="register()">Registration</button>
+    </div>
+    
+    <div id="logout" class="hidden">
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+    
+    <script src="/lessons/scripts/lesson10.js"></script>
+
+    <noscript>...</noscript>
+  </body>
+</html>
