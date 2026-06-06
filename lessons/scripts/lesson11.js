@@ -1,6 +1,6 @@
 const cl = console.log;
 const keys = "products";
-
+//
 const products = JSON.parse(localStorage.getItem(keys)) || [];
 
 const form = document.getElementById("form-add");
