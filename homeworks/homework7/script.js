@@ -1,7 +1,7 @@
 const button = document.getElementById("toggleBtn");
 const text = document.getElementById("text");
 
-button.addEventListener("click", () => {
+function toggleText() {
     if (text.style.display === "none") {
         text.style.display = "block";
         button.textContent = "Приховати";
@@ -9,4 +9,6 @@ button.addEventListener("click", () => {
         text.style.display = "none";
         button.textContent = "Показати";
     }
-});
+}
+
+button.addEventListener("click", toggleText);
