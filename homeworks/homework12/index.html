@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Пошук фільмів</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .search {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .search input, .search select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            flex: 1;
+        }
+        .search button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search button:hover {
+            background: #0056b3;
+        }
+        .movie {
+            background: #f5f5f5;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .movie img {
+            width: 80px;
+            height: 120px;
+            object-fit: cover;
+        }
+        .movie button {
+            padding: 5px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #pagination {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        #pagination button {
+            padding: 8px 15px;
+            background: #e9ecef;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #pagination button.active {
+            background: #007bff;
+            color: white;
+        }
+        #details {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+        .not-found {
+            color: red;
+            text-align: center;
+            padding: 20px;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #007bff;
+        }
+        .detail-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .detail-row img {
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Пошук фільмів</h1>
+
+    <div class="search">
+        <input type="text" id="titleInput" placeholder="Введіть назву...">
+        <select id="typeSelect">
+            <option value="">Всі</option>
+            <option value="movie">Фільм</option>
+            <option value="series">Серіал</option>
+            <option value="episode">Епізод</option>
+        </select>
+        <button onclick="searchMovies()">🔍 Пошук</button>
+    </div>
+
+    <div id="results"></div>
+    <div id="pagination"></div>
+    <div id="details"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
