@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Погода</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f5f5f5;
+            text-align: center;
+        }
+        .icon {
+            font-size: 50px;
+        }
+        .temp {
+            font-size: 28px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Погода</h1>
+
+    <select id="countrySelect">
+        <option value="">— Країна —</option>
+    </select>
+
+    <select id="citySelect">
+        <option value="">— Місто —</option>
+    </select>
+
+    <p style="text-align:center;color:#999;">або</p>
+
+    <input type="text" id="cityInput" placeholder="Введіть місто">
+    <button onclick="getWeather()">Дізнатись погоду</button>
+
+    <div id="result">Введіть місто</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
